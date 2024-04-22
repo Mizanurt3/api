@@ -5,9 +5,9 @@ export async function GET(){
   // return NextResponse.json({Name:"Mizanur"},{status:201})
   try{
     const posts=getPosts();
-    return Response.json({message:"Ok",posts},{status:200})
+    return NextResponse.json({message:"Ok",posts},{status:200})
   }catch(err){
-    return Response.json({message: "Error"},{status: 500})
+    return NextResponse.json({message: "Error"},{status: 500})
 
   } 
 }
@@ -18,7 +18,7 @@ export async function POST(request) {
   const date=res.date;
   const id=res.id;
   console.log("hi")
-  // return Response.json({ title:title||"Mizan" })
+  // return NextResponse.json({ title:title||"Mizan" })
  try {
         const post = {
           id: id,
@@ -29,8 +29,8 @@ export async function POST(request) {
         };
     
         addPost(post);
-        return Response.json({ message: "Ok", post }, { status: 201 });
+        return NextResponse.json({ message: "Ok", post }, { status: 201 });
       } catch (err) {
-        return Response.json({ message: "Mizan Error" }, { status: 500 });
+        return NextResponse.json({ message: "Mizan Error" }, { status: 500 });
       }
 }
