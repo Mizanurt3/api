@@ -6,7 +6,14 @@ const Post = {
   };
   
   // Array to store posts
-  let posts = [];
+  let posts = [
+    {
+    "id": 1,
+    "title": "aminur f",
+    "desc": "I am a Doctor f",
+    "date": "2025-04-17T03:28:30.895Z"
+   }
+  ];
   
   // Function to get all posts
   export const getPosts = () => posts;
